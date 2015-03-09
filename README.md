@@ -3,8 +3,7 @@
 ## Setup
 
 * Fork and clone the repository
-* Install gems - `bundle`
-* Set up the databases - `rake db:create db:migrate db:seed`
+* Run `bin/setup`
 * Start the server - `rails s`
 
 You can run specs with:
@@ -29,7 +28,7 @@ Then I see the patient page with an empty table of prescriptions
 Given I am on the patient's show page
 When I click on "Add prescription"
 And I fill in the fields from the comp
-Then a prescription is created with a flash message "Your prescription has been created" 
+Then a prescription is created with a flash message "Your prescription has been created"
 And you see the new prescription in the prescription table
 ```
 

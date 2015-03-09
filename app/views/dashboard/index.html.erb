@@ -1,33 +1,37 @@
-<h1>Dashboard</h1>
+<div class="page-header">
+  <h1>Dashboard</h1>
+</div>
 
-<h2>Patients</h2>
-<table class="table">
+<div class="page-header">
+  <h2>Patients</h2>
+</div>
+<table class="table table-bordered table-striped">
   <thead>
-  <tr>
-    <th>Name</th>
-  </tr>
+    <tr>
+      <th>Name</th>
+    </tr>
   </thead>
   <tbody>
-  <% @patients.each do |patient| %>
-    <tr>
-      <td><%= full_name(patient) %></td>
-    </tr>
-  <% end %>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= full_name(patient) %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 
 <h2>Medications</h2>
-<table class="table">
+<table class="table table-bordered table-striped">
   <thead>
-  <tr>
-    <th>Name</th>
-  </tr>
+    <tr>
+      <th>Name</th>
+    </tr>
   </thead>
   <tbody>
-  <% @medications.each do |medication| %>
+    <% @medications.each do |medication| %>
       <tr>
         <td><%= medication.name %></td>
       </tr>
-  <% end %>
+    <% end %>
   </tbody>
 </table>

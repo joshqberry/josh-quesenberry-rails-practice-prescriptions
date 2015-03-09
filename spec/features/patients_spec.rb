@@ -8,7 +8,8 @@ feature "Patients" do
     patient = create_patient
     login(user)
 
-    expect(page).to have_content(patient.first_name, patient.last_name)
+    expect(page).to have_content(patient.first_name)
+    expect(page).to have_content(patient.last_name)
   end
 
 end

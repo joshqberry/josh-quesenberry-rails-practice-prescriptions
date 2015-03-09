@@ -16,18 +16,18 @@ ActiveRecord::Schema.define(version: 20140811165043) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "medications", force: true do |t|
+  create_table "medications", force: :cascade do |t|
     t.string "name"
   end
 
-  create_table "patients", force: true do |t|
+  create_table "patients", force: :cascade do |t|
     t.string   "first_name", null: false
     t.string   "last_name",  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name",            null: false
     t.string "email",           null: false
     t.string "password_digest", null: false
